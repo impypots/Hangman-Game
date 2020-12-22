@@ -1,0 +1,8 @@
+#secret {
+    border-bottom: 2px solid purple;
+    margin-bottom: 2em;
+}
+
+#hangman-container {
+    margin: 1em;
+}
