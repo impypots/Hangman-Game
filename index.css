@@ -6,3 +6,11 @@
 #hangman-container {
     margin: 1em;
 }
+
+#hangman {
+    width: 300px;
+    height: 450px;
+    display: block;
+    margin-bottom: 2em;
+    border-radius: 10px;
+}
