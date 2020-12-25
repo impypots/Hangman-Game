@@ -9,3 +9,6 @@
 
  12/23/2020
  It works now! Learned how to display the correctly guessed letters of the secret word. Tried to make it look a bit more appealing. The function now removes the event listener once the player wins/loses so they can't continue to input letters after the game ends. I think tomorrow I'm going to change the game from "Hangman" to "Reverse Hangman". Just for fun.
+
+ 12/24/2020
+ Changed the game to "Reverse Hangman" today. The win condition works, I just have to add a lose condition and give the player a limited number of incorrect guesses so that its still possible for them to lose. I might also add rules for people unfamiliar with how hangman works.

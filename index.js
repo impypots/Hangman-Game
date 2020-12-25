@@ -20,21 +20,17 @@ function buttonClick() {
     if(input.value.length > 1){
         alert("Just one letter at a time, please!")
     } else if (secretWord.includes(input.value)){
+        if(incorrectCounter < 5){
+            incorrectCounter += 1
+        };
         //checks to see if the letter at position i in secretWord is equal to the user input. If it is, the underscore at position i in secretArr is replaced with the user input.
         for(let i = 0; i < secretArr.length; i++){
             if(secretWord[i] === input.value){
                 secretArr[i] = input.value;
             }
         }
-        secret.innerText = `Secret Word(${secretArr.length}): ${secretArr.join(" ")}`;
-        if(secretArr.join("") === secretWord){
-            alert("You win! Now we just need to reform our cruel and unusual death sentencing procedures!");
-            button.removeEventListener("click", buttonClick);
-        }
-    } else {
-        incorrect.innerText += input.value;
-        input.value = "";
-        incorrectCounter += 1;
+
+        
         //this switch case changes the hangman image based upon the number of incorrect guesses the player has made.
         switch (incorrectCounter) {
             case 1:
@@ -59,6 +55,18 @@ function buttonClick() {
                 button.removeEventListener("click", buttonClick);
                 break;
         }
+
+        secret.innerText = `Secret Word(${secretArr.length}): ${secretArr.join(" ")}`;
+        if(secretArr.join("") === secretWord){
+            alert("You win! Your sadistic lust for human death has been sated!...for now.");
+            hangman.src = "C:/Users/Owner/Documents/GitHub/Hangman-Game/hangman7-2.png";
+            button.removeEventListener("click", buttonClick);
+        }
+    } else {
+        incorrect.innerText += input.value;
+        input.value = "";
+       
+       
     }
     input.value = ""
 }
