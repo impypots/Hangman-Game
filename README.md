@@ -12,3 +12,6 @@
 
  12/24/2020
  Changed the game to "Reverse Hangman" today. The win condition works, I just have to add a lose condition and give the player a limited number of incorrect guesses so that its still possible for them to lose. I might also add rules for people unfamiliar with how hangman works.
+
+ 12/26/2020
+ Lose condition added, giving the player a limited amount of incorrect guesses represented by "x". The number of incorrect guesses allowed the length of the word minus two. I found this project to be enjoyable and rewarding.
